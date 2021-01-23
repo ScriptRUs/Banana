@@ -20,7 +20,12 @@ game:GetService("ReplicatedStorage").Remotes.Dungeon.Begin:FireServer()
 game.workspace.Terrain:Clear()
 game.ReplicatedStorage:WaitForChild("Remotes")
 game.Players.LocalPlayer:WaitForChild("leaderstats")
-
+--Anti AFK
+  game:service'Players'.LocalPlayer.Idled:connect(function()
+    game:service'VirtualUser':CaptureController()
+    game:service'VirtualUser':ClickButton2(Vector2.new())
+end)
+  
   --The Autofarm
 for i,v in pairs(game:GetService("Workspace").DungeonFolder:GetDescendants()) do 
         if v.Name == "HumanoidRootPart" then
