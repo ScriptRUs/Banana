@@ -37,11 +37,11 @@ function lib:makeSpace()
 end
 
 function lib:infoMessage(msg)
-    rconsoleinfo(msg)
+    consoleinfo(msg)
 end
 
 function lib:warnMessage(msg)
-    rconsolewarn(msg)
+    consolewarn(msg)
 end
 
 function lib:errorMessage(msg)
